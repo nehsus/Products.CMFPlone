@@ -10,6 +10,7 @@ from zope.schema.vocabulary import SimpleTerm
 from zope.schema.vocabulary import SimpleVocabulary
 
 import json
+import six
 
 
 ROBOTS_TXT = u"""Sitemap: {portal_url}/sitemap.xml.gz
@@ -55,7 +56,7 @@ def validate_json(value):
         class JSONError(schema.ValidationError):
             __doc__ = _(u"Must be empty or a valid JSON-formatted "
                         u"configuration – ${message}.", mapping={
-                            'message': unicode(exc)})
+                            'message': six.text_type(exc)})
 
         raise JSONError(value)
 

@@ -28,6 +28,9 @@ Breaking changes:
 
 New Features:
 
+- Prepare for Python 2 / 3 compatibility.
+  [pbauer]
+
 - Fix imports to work with Python 3.
   [pbauer]
 
